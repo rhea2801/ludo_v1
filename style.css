@@ -1,0 +1,412 @@
+ *{
+
+ 	box-sizing: border-box;
+ 	padding: 0;
+ 	margin: 0;
+ 	font-family: verdana;
+ }
+
+
+
+ .container{
+
+	
+ 	display: grid;
+ 	height: 90vh;
+ 	width: auto;
+ 	background-color: grey;
+ 	margin: 40px;
+ 	grid-template-rows: 6;
+ 	grid-template-columns: 8;
+ }
+
+
+.red-locker{
+
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end:3;
+	min-width: 100px;
+	min-height: 100px;
+	background-color: white;
+	margin: 15px;
+	
+}
+
+.blue-locker{
+
+	grid-row-start: 5;
+	grid-row-end: 6;
+	grid-column-start: 6;
+	grid-column-end: 8;
+	min-width: 100px;
+	min-height: 100px;
+	background-color: white;
+	margin: 15px;
+	
+}
+
+.red-locker, .blue-locker{
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.red-locker p, .blue-locker p, .red-locker h2, .blue-locker h2{
+
+	padding-top: 10px;
+	flex: 1;
+}
+
+h2{
+
+	text-decoration: underline;
+	color: #474747;
+}
+
+.blue-locker img, .red-locker img{
+
+    padding: 7px;
+    width:5vh;
+    height: 5vh;
+	
+}
+
+.larger-text{
+
+	font-size: 1.1em;
+}
+
+.board-outline{
+
+	grid-row-start: 1;
+	grid-row-end: 6;
+	grid-column-start: 3;
+	grid-column-end: 6;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 15px;
+	
+
+
+}
+
+.board-main{
+
+	margin: 0 auto;
+	width: 35vw;
+	height: 35vw;
+	background-color:white;
+	margin: 0 auto;
+	display: grid;
+	grid-template-rows: 9;
+	grid-template-columns: 9;
+	position: relative;
+
+}
+
+.board-squares{
+
+	grid-row-end: span 1;
+	grid-column-end: span 1;
+	width: 100%;
+	height: 100%;
+	background-color: #ebebeb;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+
+}
+
+#sq-1, #sq-2, #sq-3, #sq-4, #sq-5, #sq-6, #sq-7, #sq-8{
+
+	grid-row-start: 1;
+	border-right: 1px solid #a2a2a2;
+
+	
+}
+
+#sq-15, #sq-16, #sq-17, #sq-18, #sq-19, #sq-20, #sq-21, #sq-22{
+
+	grid-row-start: 8;
+	border-left: 1px solid #a2a2a2;
+	
+}
+
+#sq-1, #sq-28, #sq-27, #sq-26, #sq-25, #sq-24, #sq-23, #sq-22{
+
+	grid-column-start: 1;
+	border-bottom: 1px solid #a2a2a2;
+	
+}
+
+#sq-8, #sq-9, #sq-10, #sq-11, #sq-12, #sq-13, #sq-14, #sq-15{
+
+	grid-column-start: 8;
+	border-top: 1px solid #a2a2a2;
+	
+}
+
+
+
+
+#sq-28, #sq-9{
+
+	grid-row-start: 2;
+}
+
+
+#sq-27, #sq-10{
+
+	grid-row-start: 3;
+}
+
+#sq-26, #sq-11{
+
+	grid-row-start: 4;
+}
+
+#sq-25, #sq-12{
+
+	grid-row-start: 5;
+}
+
+#sq-24, #sq-13{
+
+	grid-row-start: 6;
+}
+
+#sq-23, #sq-14{
+
+	grid-row-start: 7;
+}
+
+
+
+
+#sq-21, #sq-2{
+
+	grid-column-start: 2;
+}
+
+
+#sq-20, #sq-3{
+
+	grid-column-start: 3;
+}
+
+#sq-19, #sq-4{
+
+	grid-column-start: 4;
+}
+
+#sq-18, #sq-5{
+
+	grid-column-start: 5;
+}
+
+#sq-17, #sq-6{
+
+	grid-column-start: 6;
+}
+
+#sq-16, #sq-7{
+
+	grid-column-start: 7;
+}
+
+
+#sq-22{
+
+	border-left: 0;
+	border-bottom: 0;
+}
+
+#sq-8{
+
+	border-right: 0;
+	border-top: 0;
+}
+
+
+
+#sq-1{
+
+	background-color: #fd6e53;
+	border: 0;
+}
+
+#sq-28{
+
+	background-color: #ffac9c;
+	border: 0;
+}
+
+#sq-15{
+
+	background-color: #ad6dff;
+	border: 0;
+}
+
+#sq-14{
+
+	background-color: #d1b0fc;
+	border: 0;
+}
+
+.stats{
+
+	position: absolute;
+	z-index: 1;
+	width: 20vw;
+	height: 10vw;
+	background-color: #f5f5f5;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	display: flex;
+	flex-direction: column;
+	border: 2px solid #e7e7e7;
+	border-radius: 10px;
+
+}
+
+.stats div{
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.turn{
+
+	flex: 1;
+
+}
+
+.new-game {
+
+	text-decoration: none;
+	color: black;
+	transition: all 0.3s ease;
+}
+
+.new-game:hover{
+
+	color: #1e798a;
+	font-size: 1.1em;
+	
+}
+
+.roll-btn{
+
+	flex: 1;
+	background-color: #e6e6e6;
+
+}
+
+.roll-btn a{
+
+	text-decoration: none;
+	color: black;
+	transition: all 0.3s ease;
+	visibility: hidden;
+	
+}
+
+.roll-btn a:hover{
+
+	color: #7f9e3e;
+	
+}
+
+.rand-num-div{
+
+	flex:1;
+
+}
+
+/* pawns on board at initial squares*/
+
+#r1-board{
+
+	position: absolute;
+	top: 0.193vw;
+	left: 1.2875vw;
+	z-index: 1;
+	width: 1.8vw;
+	height: auto;
+	visibility: hidden;
+	transition: opacity 1.0s ease-in-out;
+	
+}
+
+#r2-board{
+
+	position: absolute;
+	bottom: 0.193vw;
+	left: 1.2875vw;
+	z-index: 1;
+	width: 1.8vw;
+	height: auto;
+	visibility: hidden;
+	transition: opacity 1.0s ease-in-out;
+	
+}
+
+#b1-board{
+
+	position: absolute;
+	top: 0.193vw;
+	left: 1.2875vw;
+	z-index: 1;
+	width: 1.8vw;
+	height: auto;
+	visibility: hidden;
+	transition: opacity 1.0s ease-in-out;
+	
+}
+
+#b2-board{
+
+	position: absolute;
+	bottom: 0.193vw;
+	left: 1.2875vw;
+	z-index: 1;
+	width: 1.8vw;
+	height: auto;
+	visibility: hidden;
+	transition: opacity 1.0s ease-in-out;
+}
+
+#r1-locker-div{
+
+	transition: opacity 1.0s ease-in-out;
+}
+
+#r2-locker-div{
+
+	transition: opacity 1.0s ease-in-out;
+}
+
+#b1-locker-div{
+
+	transition: opacity 1.0s ease-in-out;
+}
+
+#b2-locker-div{
+
+	transition: opacity 1.0s ease-in-out;
+}
